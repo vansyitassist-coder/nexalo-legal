@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account &amp; Data Deletion — Tactical Mill - Cờ hàng 24 | Nexalo</title>
+  <meta name="description" content="Official instructions to permanently delete your Tactical Mill - Cờ hàng 24 (online.nexalo.tacticalmill) account and personal data in-app or via web request." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nexalo.online/account-deletion" />
+  <link rel="icon" type="image/svg+xml" href="/assets/nexalo-symbol.svg" />
+
+  <meta property="og:title" content="Account &amp; Data Deletion — Tactical Mill - Cờ hàng 24 | Nexalo" />
+  <meta property="og:description" content="Delete your Tactical Mill - Cờ hàng 24 account immediately inside the app or submit a web deletion request." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://nexalo.online/account-deletion" />
+  <meta property="og:site_name" content="Nexalo" />
+
+  <style>
+    :root {
+      --nx-bg-primary: #090d16;
+      --nx-bg-secondary: #0f1625;
+      --nx-surface-card: #121b2d;
+      --nx-surface-stroke: #24314f;
+      --nx-text-primary: #f8fafc;
+      --nx-text-secondary: #cbd5e1;
+      --nx-text-muted: #94a3b8;
+      --nx-gold-300: #f1c768;
+      --nx-gold-400: #e5b84b;
+      --nx-gold-500: #cf9c2f;
+      --nx-accent-300: #5eead4;
+      --nx-accent-400: #2dd4bf;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--nx-bg-primary);
+      color: var(--nx-text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Plus Jakarta Sans", Inter, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--nx-gold-300);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--nx-accent-300);
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header.site-header {
+      background: rgba(9, 13, 22, 0.92);
+      border-bottom: 1px solid var(--nx-surface-stroke);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .lang-jump {
+      display: inline-flex;
+      gap: 10px;
+      margin: 28px 0 8px;
+    }
+
+    .lang-pill {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--nx-surface-card);
+      border: 1px solid var(--nx-surface-stroke);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--nx-text-secondary);
+    }
+
+    .lang-pill:hover {
+      border-color: var(--nx-gold-400);
+      color: var(--nx-gold-300);
+      text-decoration: none;
+    }
+
+    .card {
+      background: var(--nx-surface-card);
+      border: 1px solid var(--nx-surface-stroke);
+      border-radius: 18px;
+      padding: 36px;
+      margin: 24px 0 40px;
+    }
+
+    .doc-eyebrow {
+      color: var(--nx-accent-400);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: clamp(1.85rem, 3.4vw, 2.45rem);
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--nx-text-primary);
+    }
+
+    .meta-row {
+      font-size: 0.92rem;
+      color: var(--nx-text-muted);
+      padding-bottom: 22px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--nx-surface-stroke);
+    }
+
+    h2 {
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: var(--nx-gold-300);
+      margin: 28px 0 12px;
+    }
+
+    p {
+      color: var(--nx-text-secondary);
+      margin-bottom: 14px;
+    }
+
+    ol, ul {
+      margin: 0 0 18px 22px;
+      color: var(--nx-text-secondary);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--nx-text-primary);
+    }
+
+    code {
+      background: rgba(9, 13, 22, 0.75);
+      border: 1px solid var(--nx-surface-stroke);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.9em;
+      color: var(--nx-accent-300);
+    }
+
+    .cta-box {
+      background: rgba(229, 184, 75, 0.08);
+      border: 1px solid rgba(229, 184, 75, 0.35);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 18px 0 24px;
+    }
+
+    .btn-request {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--nx-gold-300) 0%, var(--nx-gold-500) 100%);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 0.96rem;
+      margin-top: 10px;
+    }
+
+    .btn-request:hover {
+      color: #090d16;
+      filter: brightness(1.06);
+      text-decoration: none;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 22px;
+      font-size: 0.92rem;
+    }
+
+    .data-table th,
+    .data-table td {
+      border: 1px solid var(--nx-surface-stroke);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .data-table th {
+      background: rgba(9, 13, 22, 0.65);
+      color: var(--nx-gold-300);
+      font-weight: 700;
+    }
+
+    .data-table td {
+      color: var(--nx-text-secondary);
+    }
+
+    footer.site-footer {
+      padding: 36px 0;
+      border-top: 1px solid var(--nx-surface-stroke);
+      font-size: 0.88rem;
+      color: var(--nx-text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 680px) {
+      .card {
+        padding: 22px;
+      }
+      .data-table th,
+      .data-table td {
+        padding: 9px 10px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="/" aria-label="Nexalo Home">
+        <img src="/assets/nexalo-logo.svg" alt="Nexalo Logo" class="brand-logo" width="174" height="44" />
+      </a>
+      <nav class="nav-links" aria-label="Legal Navigation">
+        <a href="/">Home</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/account-deletion">Account Deletion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="lang-jump" role="navigation" aria-label="Language switcher">
+      <a href="#en" class="lang-pill">English (Canonical)</a>
+      <a href="#vi" class="lang-pill">Tiếng Việt (Bản dịch)</a>
+    </div>
+
+    <!-- ENGLISH CANONICAL -->
+    <article id="en" class="card" lang="en">
+      <div class="doc-eyebrow">Google Play User Data Compliance • English Canonical</div>
+      <h1>Account &amp; Data Deletion — Tactical Mill - Cờ hàng 24</h1>
+      <div class="meta-row">
+        <strong>Application:</strong> Tactical Mill - Cờ hàng 24 (Android package: <code>online.nexalo.tacticalmill</code> &amp; Web application)<br />
+        <strong>Publisher:</strong> NexaloOnline (Nexalo)<br />
+        <strong>Support &amp; Deletion Request Email:</strong> <a href="mailto:support@nexalo.online">support@nexalo.online</a>
+      </div>
+
+      <p>You can permanently delete your <strong>Tactical Mill - Cờ hàng 24</strong> account and associated personal data at any time using either of the two official methods below.</p>
+
+      <h2>Option 1 — Instant Deletion Inside the App (Recommended)</h2>
+      <p>If you still have the app installed on your device, you can delete your account immediately without waiting for manual support processing:</p>
+      <ol>
+        <li>Open <strong>Tactical Mill - Cờ hàng 24</strong> and ensure you are signed in to the account you wish to delete (Registered or Guest).</li>
+        <li>Tap your <strong>Account / Profile pill</strong> in the top-right corner of the main screen to open the Account sheet.</li>
+        <li>Tap the <strong>Delete Account</strong> button.</li>
+        <li>Review the summary of data that will be permanently erased versus shared records that will be anonymised, then tap <strong>Continue to Verification</strong>.</li>
+        <li>For a <strong>Registered Account</strong>, enter your current password to verify ownership. For a <strong>Guest Account</strong>, type the confirmation word <code>DELETE</code>.</li>
+        <li>Tap <strong>Permanently Delete Account</strong>. Your account is deleted immediately, all active sessions are revoked, and local device credentials are cleared.</li>
+      </ol>
+
+      <h2>Option 2 — Request Account Deletion on the Web (No App Required)</h2>
+      <p>If you have already uninstalled the app or cannot sign in, you can submit a web deletion request via email:</p>
+      <div class="cta-box">
+        <p><strong>Send a deletion request to:</strong> <a href="mailto:support@nexalo.online?subject=Account%20Deletion%20Request%20-%20Tactical%20Mill">support@nexalo.online</a></p>
+        <p>Please include the following details so we can verify account ownership:</p>
+        <ul>
+          <li><strong>Subject line:</strong> <code>Account Deletion Request - Tactical Mill</code></li>
+          <li><strong>Send from:</strong> The email address registered to your Nexalo ID account (recommended for fastest verification), <strong>OR</strong> include your <strong>username / display name</strong> and approximate date of last login.</li>
+        </ul>
+        <a class="btn-request" href="mailto:support@nexalo.online?subject=Account%20Deletion%20Request%20-%20Tactical%20Mill&amp;body=Hello%20Nexalo%20Support%2C%0A%0AI%20request%20the%20permanent%20deletion%20of%20my%20Tactical%20Mill%20-%20C%E1%BB%9D%20h%C3%A0ng%2024%20account%20and%20personal%20data.%0A%0A-%20Registered%20Email%3A%20%0A-%20Username%20%2F%20Display%20Name%3A%20%0A%0AThank%20you.">
+          Submit Deletion Request via Email
+        </a>
+      </div>
+      <p><strong>Processing Time (SLA):</strong> Verified web/email deletion requests are completed <strong>within 30 days</strong> of receipt, and we send a final confirmation reply once deletion is complete before erasing our correspondence copy of your email address.</p>
+
+      <h2>What Data Is Erased vs. Anonymised</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Action Taken Upon Account Deletion</th>
+            <th>Retention Period After Deletion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Personal Profile &amp; Credentials</strong><br />(Email, username, display name, password hash, active sessions, refresh tokens)</td>
+            <td><strong>Permanently Erased</strong></td>
+            <td>Erased immediately upon deletion (0 days). Your old email and username are freed.</td>
+          </tr>
+          <tr>
+            <td><strong>Solo Game Progress &amp; Virtual Balances</strong><br />(Coins, Gems, Tickets, Season Points, Glicko-2 RP rating, quests, season pass, waiting rooms)</td>
+            <td><strong>Permanently Erased</strong></td>
+            <td>Erased immediately upon deletion (0 days).</td>
+          </tr>
+          <tr>
+            <td><strong>Shared Two-Player Records</strong><br />(Completed match history, PGN move replays, and counterparty ledger entries shared with opponents)</td>
+            <td><strong>Anonymised</strong><br />Your display name is replaced with <code>"Deleted Player"</code> and all personal identifiers are stripped so your opponent's match history remains intact.</td>
+            <td>Retained in anonymised, non-identifiable form.</td>
+          </tr>
+          <tr>
+            <td><strong>Security &amp; Troubleshooting Logs</strong><br />(Past security audit events)</td>
+            <td><strong>Personal Identifiers Scrubbed</strong> + a single anonymised <code>ACCOUNT_DELETED</code> compliance event (hashed subject ID, no email/IP).</td>
+            <td>Security logs are kept for up to <strong>90 days</strong> for security and troubleshooting before being deleted or anonymised.</td>
+          </tr>
+          <tr>
+            <td><strong>Fraud-Prevention &amp; Anti-Abuse Records</strong><br />(One-time device welcome-reward lock &amp; anonymised device-hash risk memory)</td>
+            <td><strong>De-linked from Account Identity</strong><br />All user IDs, emails, and IP addresses are removed; only a cryptographic hash of the device identifier is kept to prevent multi-account reward farming and repeat abuse.</td>
+            <td>Kept for as long as needed to protect the Service and other players, then erased or anonymised when that need ends.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>For full details on how we handle user data, read our <a href="/privacy">Privacy Policy</a>.</p>
+    </article>
+
+    <!-- VIETNAMESE TRANSLATION -->
+    <article id="vi" class="card" lang="vi">
+      <div class="doc-eyebrow">Tuân thủ Dữ liệu Người dùng Google Play • Bản Tiếng Việt</div>
+      <h2>Hướng dẫn &amp; Yêu cầu Xoá Tài khoản — Tactical Mill - Cờ hàng 24</h2>
+      <div class="meta-row">
+        <strong>Ứng dụng:</strong> Tactical Mill - Cờ hàng 24 (Android package: <code>online.nexalo.tacticalmill</code> &amp; bản Web)<br />
+        <strong>Đơn vị phát hành:</strong> NexaloOnline (Nexalo)<br />
+        <strong>Email hỗ trợ &amp; tiếp nhận yêu cầu xoá:</strong> <a href="mailto:support@nexalo.online">support@nexalo.online</a>
+      </div>
+
+      <p>Bạn có thể yêu cầu xoá vĩnh viễn tài khoản <strong>Tactical Mill - Cờ hàng 24</strong> và dữ liệu cá nhân liên quan bất cứ lúc nào bằng một trong hai cách chính thức dưới đây.</p>
+
+      <h2>Cách 1 — Xoá tức thì ngay trong ứng dụng (Khuyên dùng)</h2>
+      <p>Nếu bạn vẫn còn cài đặt ứng dụng trên thiết bị, bạn có thể xoá tài khoản ngay lập tức mà không cần chờ xử lý thủ công:</p>
+      <ol>
+        <li>Mở <strong>Tactical Mill - Cờ hàng 24</strong> và đảm bảo bạn đang đăng nhập vào tài khoản muốn xoá (Tài khoản chính thức hoặc Khách).</li>
+        <li>Chạm vào <strong>nút Tài khoản / Hồ sơ</strong> ở góc trên bên phải màn hình chính để mở bảng Tài khoản.</li>
+        <li>Chạm vào nút <strong>Xoá tài khoản (Delete Account)</strong>.</li>
+        <li>Đọc kỹ tóm tắt các dữ liệu sẽ bị xoá vĩnh viễn và các bản ghi chung sẽ được ẩn danh hoá, sau đó chọn <strong>Tiếp tục xác minh</strong>.</li>
+        <li>Với <strong>Tài khoản đã đăng ký</strong>, nhập mật khẩu hiện tại để xác thực chủ sở hữu. Với <strong>Tài khoản Khách (Guest)</strong>, nhập cụm từ xác nhận <code>DELETE</code>.</li>
+        <li>Chạm vào <strong>Xoá vĩnh viễn tài khoản</strong>. Tài khoản của bạn sẽ bị xoá ngay lập tức, toàn bộ phiên đăng nhập bị thu hồi và thông tin lưu cục bộ trên máy được dọn sạch.</li>
+      </ol>
+
+      <h2>Cách 2 — Yêu cầu xoá tài khoản qua Web (Khi đã gỡ ứng dụng)</h2>
+      <p>Nếu bạn đã gỡ cài đặt ứng dụng hoặc không thể đăng nhập vào máy, bạn có thể gửi yêu cầu xoá qua email:</p>
+      <div class="cta-box">
+        <p><strong>Gửi yêu cầu xoá tới:</strong> <a href="mailto:support@nexalo.online?subject=Account%20Deletion%20Request%20-%20Tactical%20Mill">support@nexalo.online</a></p>
+        <p>Vui lòng cung cấp các thông tin sau để chúng tôi xác minh chủ sở hữu tài khoản:</p>
+        <ul>
+          <li><strong>Tiêu đề email:</strong> <code>Account Deletion Request - Tactical Mill</code></li>
+          <li><strong>Gửi từ:</strong> Chính địa chỉ email đã đăng ký tài khoản Nexalo ID của bạn (khuyên dùng để xác minh nhanh nhất), <strong>HOẶC</strong> ghi rõ <strong>username / tên hiển thị</strong> kèm thời điểm đăng nhập gần nhất.</li>
+        </ul>
+        <a class="btn-request" href="mailto:support@nexalo.online?subject=Account%20Deletion%20Request%20-%20Tactical%20Mill&amp;body=Xin%20ch%C3%A0o%20Nexalo%20Support%2C%0A%0AT%C3%B4i%20y%C3%AAu%20c%E1%BA%A7u%20xo%C3%A1%20v%C4%A9nh%20vi%E1%BB%85n%20t%C3%A0i%20kho%E1%BA%A3n%20v%C3%A0%20d%E1%BB%AF%20li%E1%BB%87u%20c%C3%A1%20nh%C3%A2n%20c%E1%BB%A7a%20t%C3%B4i%20trong%20Tactical%20Mill%20-%20C%E1%BB%9D%20h%C3%A0ng%2024.%0A%0A-%20Email%20%C4%91%C4%83ng%20k%C3%BD%3A%20%0A-%20Username%20%2F%20T%C3%AAn%20hi%E1%BB%83n%20th%E1%BB%8B%3A%20%0A%0AXin%20c%E1%BA%A3m%20%C6%A1n.">
+          Gửi yêu cầu xoá qua Email
+        </a>
+      </div>
+      <p><strong>Thời hạn xử lý (SLA):</strong> Mọi yêu cầu xoá hợp lệ qua web/email được xử lý hoàn tất <strong>trong vòng 30 ngày</strong> kể từ khi tiếp nhận. Chúng tôi sẽ gửi email phản hồi xác nhận hoàn tất trước khi xoá bản lưu địa chỉ email trao đổi của bạn.</p>
+
+      <h2>Bảng chi tiết dữ liệu bị xoá và dữ liệu được ẩn danh hoá</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Nhóm dữ liệu</th>
+            <th>Hành động khi xoá tài khoản</th>
+            <th>Thời hạn lưu giữ sau khi xoá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hồ sơ cá nhân &amp; Thông tin xác thực</strong><br />(Email, username, tên hiển thị, mã băm mật khẩu, phiên đăng nhập, refresh token)</td>
+            <td><strong>Xoá vĩnh viễn</strong></td>
+            <td>Xoá ngay lập tức khi thực thi (0 ngày). Email và username cũ được giải phóng.</td>
+          </tr>
+          <tr>
+            <td><strong>Tiến trình chơi đơn &amp; Số dư tiền ảo</strong><br />(Xu, Gem, Vé, Điểm Mùa, điểm xếp hạng Glicko-2 RP, nhiệm vụ, season pass, phòng chờ)</td>
+            <td><strong>Xoá vĩnh viễn</strong></td>
+            <td>Xoá ngay lập tức khi thực thi (0 ngày).</td>
+          </tr>
+          <tr>
+            <td><strong>Bản ghi chung giữa 2 người chơi</strong><br />(Lịch sử trận đấu đã hoàn thành, biên bản nước đi PGN, bút toán sổ cái đối ứng với đối thủ)</td>
+            <td><strong>Ẩn danh hoá</strong><br />Tên hiển thị của bạn được thay bằng <code>"Deleted Player"</code> và gỡ bỏ toàn bộ định danh cá nhân để lịch sử đấu của đối thủ không bị hỏng.</td>
+            <td>Lưu giữ ở dạng ẩn danh phi định danh.</td>
+          </tr>
+          <tr>
+            <td><strong>Nhật ký bảo mật &amp; khắc phục sự cố</strong><br />(Các bản ghi kiểm toán bảo mật cũ)</td>
+            <td><strong>Xoá sạch định danh cá nhân</strong> + ghi 1 sự kiện tuân thủ <code>ACCOUNT_DELETED</code> đã ẩn danh (mã băm chủ thể, không lưu email/IP).</td>
+            <td>Nhật ký bảo mật được giữ tối đa <strong>90 ngày</strong> cho mục đích bảo mật và khắc phục sự cố trước khi bị xoá hoặc ẩn danh hoá.</td>
+          </tr>
+          <tr>
+            <td><strong>Bản ghi phòng chống gian lận &amp; chống trục lợi</strong><br />(Khoá nhận quà tân thủ theo thiết bị &amp; dấu vết rủi ro theo mã băm thiết bị)</td>
+            <td><strong>Gỡ liên kết khỏi định danh tài khoản</strong><br />Toàn bộ userId, email và IP bị gỡ bỏ; chỉ giữ lại mã băm mật mã của định danh thiết bị nhằm chống cày thưởng đa tài khoản và tái phạm gian lận.</td>
+            <td>Lưu giữ trong thời gian cần thiết để bảo vệ Dịch vụ và người chơi khác, sau đó bị xoá hoặc ẩn danh hoá khi nhu cầu kết thúc.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Xem toàn văn quy định bảo vệ dữ liệu tại <a href="/privacy">Chính sách Quyền riêng tư (Privacy Policy)</a>.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      &copy; 2026 Nexalo (NexaloOnline) &nbsp;•&nbsp;
+      <a href="/">Home</a> &nbsp;•&nbsp;
+      <a href="/privacy">Privacy Policy</a> &nbsp;•&nbsp;
+      <a href="/account-deletion">Account Deletion</a> &nbsp;•&nbsp;
+      <a href="mailto:support@nexalo.online">support@nexalo.online</a>
+    </div>
+  </footer>
+</body>
+</html>

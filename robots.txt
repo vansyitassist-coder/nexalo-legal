@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /privacy
+Allow: /account-deletion
+
+Sitemap: https://nexalo.online/sitemap.xml

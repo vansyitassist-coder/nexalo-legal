@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="26" y1="22" x2="226" y2="234" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111A30"/>
+      <stop offset="1" stop-color="#0A1020"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="68" y1="46" x2="194" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1C768"/>
+      <stop offset="1" stop-color="#BA8425"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="70" y1="84" x2="188" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="208" height="208" rx="52" fill="url(#bg)" stroke="#24314F" stroke-width="3"/>
+  <path d="M128 52L188 86V154L128 188L68 154V86L128 52Z" stroke="url(#gold)" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M88 164V94L168 164V94" stroke="#F8FAFC" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="128" cy="52" r="7" fill="#F1C768"/>
+  <circle cx="188" cy="86" r="7" fill="url(#teal)"/>
+  <circle cx="68" cy="154" r="7" fill="url(#teal)"/>
+</svg>

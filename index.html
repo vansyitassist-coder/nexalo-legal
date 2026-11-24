@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tactical Mill - Cờ hàng 24 | Competitive Abstract Strategy Board Game by Nexalo</title>
+  <meta name="description" content="Tactical Mill (Cờ hàng 24) is a competitive 24-point abstract strategy board game by Nexalo. Master three concentric rings, form tactical mills, challenge 4 AI difficulty tiers, or compete in live Ranked Glicko-2 matches." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nexalo.online/" />
+  <link rel="icon" type="image/svg+xml" href="/assets/nexalo-symbol.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tactical Mill - Cờ hàng 24 | Competitive Strategy Game by Nexalo" />
+  <meta property="og:description" content="Master the 24-point tactical board across three concentric rings and diagonal corridors. Play offline against 4 AI levels or compete in live online Ranked matches." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nexalo.online/" />
+  <meta property="og:image" content="https://nexalo.online/assets/screenshot-match.png" />
+  <meta property="og:site_name" content="Nexalo" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tactical Mill - Cờ hàng 24 | Competitive Strategy Game by Nexalo" />
+  <meta name="twitter:description" content="Competitive 24-point abstract strategy board game with offline AI, daily tactical puzzles, private friend rooms, and Glicko-2 online ranked play." />
+  <meta name="twitter:image" content="https://nexalo.online/assets/screenshot-match.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "VideoGame",
+        "name": "Tactical Mill - Cờ hàng 24",
+        "alternateName": "Cờ hàng 24",
+        "url": "https://nexalo.online/",
+        "image": "https://nexalo.online/assets/screenshot-match.png",
+        "description": "Competitive 24-point abstract strategy board game featuring three concentric squares, diagonal tactical corridors, offline AI training, daily puzzles, and live online Glicko-2 ranked play.",
+        "genre": ["Strategy", "Board Game", "Abstract Strategy"],
+        "playMode": ["SinglePlayer", "MultiPlayer"],
+        "gamePlatform": ["Android", "Web"],
+        "operatingSystem": "Android",
+        "applicationCategory": "GameApplication",
+        "inLanguage": ["en", "vi"],
+        "author": {
+          "@type": "Organization",
+          "name": "Nexalo",
+          "url": "https://nexalo.online/",
+          "email": "support@nexalo.online"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "NexaloOnline",
+          "url": "https://nexalo.online/"
+        }
+      },
+      {
+        "@type": "MobileApplication",
+        "name": "Tactical Mill - Cờ hàng 24",
+        "operatingSystem": "Android",
+        "applicationCategory": "GameApplication",
+        "identifier": "online.nexalo.tacticalmill",
+        "url": "https://nexalo.online/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --nx-bg-primary: #090d16;
+      --nx-bg-secondary: #0f1625;
+      --nx-bg-elevated: #141e31;
+      --nx-surface-card: #121b2d;
+      --nx-surface-stroke: #24314f;
+      --nx-text-primary: #f8fafc;
+      --nx-text-secondary: #cbd5e1;
+      --nx-text-muted: #94a3b8;
+      --nx-gold-300: #f1c768;
+      --nx-gold-400: #e5b84b;
+      --nx-gold-500: #cf9c2f;
+      --nx-gold-600: #a97719;
+      --nx-accent-300: #5eead4;
+      --nx-accent-400: #2dd4bf;
+      --nx-accent-500: #14b8a6;
+      --nx-radius-md: 16px;
+      --nx-radius-lg: 22px;
+      --nx-shadow-soft: 0 12px 36px rgba(3, 8, 20, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--nx-bg-primary);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(229, 184, 75, 0.12), transparent 38%),
+        radial-gradient(circle at 85% 18%, rgba(45, 212, 191, 0.1), transparent 36%);
+      color: var(--nx-text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Plus Jakarta Sans", Inter, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--nx-gold-300);
+      text-decoration: none;
+      transition: color 0.18s ease;
+    }
+
+    a:hover {
+      color: var(--nx-accent-300);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(9, 13, 22, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(36, 49, 79, 0.75);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      color: var(--nx-text-secondary);
+    }
+
+    .nav-links a:hover {
+      color: var(--nx-gold-300);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 72px 0 64px;
+      border-bottom: 1px solid rgba(36, 49, 79, 0.55);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(229, 184, 75, 0.12);
+      border: 1px solid rgba(229, 184, 75, 0.38);
+      color: var(--nx-gold-300);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.15rem, 4.2vw, 3.35rem);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: var(--nx-text-primary);
+    }
+
+    h1 span.highlight {
+      background: linear-gradient(135deg, var(--nx-gold-300) 0%, var(--nx-gold-500) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      font-size: 1.12rem;
+      color: var(--nx-text-secondary);
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 24px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--nx-gold-300) 0%, var(--nx-gold-500) 100%);
+      color: #0b0f17;
+      font-weight: 800;
+      font-size: 0.98rem;
+      box-shadow: 0 8px 24px rgba(207, 156, 47, 0.25);
+    }
+
+    .btn-primary:hover {
+      color: #090d16;
+      filter: brightness(1.06);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 14px;
+      background: var(--nx-bg-elevated);
+      border: 1px solid var(--nx-surface-stroke);
+      color: var(--nx-text-primary);
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--nx-gold-400);
+      color: var(--nx-gold-300);
+    }
+
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.88rem;
+      color: var(--nx-text-muted);
+    }
+
+    .meta-tags span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Tactical 24-Point Board Diagram Card */
+    .board-showcase-card {
+      background: linear-gradient(180deg, rgba(20, 30, 49, 0.9) 0%, rgba(15, 22, 37, 0.95) 100%);
+      border: 1px solid var(--nx-surface-stroke);
+      border-radius: var(--nx-radius-lg);
+      padding: 28px;
+      box-shadow: var(--nx-shadow-soft);
+      text-align: center;
+    }
+
+    .board-svg {
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    .board-caption {
+      font-size: 0.88rem;
+      color: var(--nx-text-muted);
+    }
+
+    /* Section Styling */
+    section.section-block {
+      padding: 68px 0;
+      border-bottom: 1px solid rgba(36, 49, 79, 0.5);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .section-eyebrow {
+      color: var(--nx-accent-400);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--nx-text-primary);
+    }
+
+    .section-subtitle {
+      color: var(--nx-text-secondary);
+      font-size: 1.02rem;
+    }
+
+    /* Feature Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: var(--nx-surface-card);
+      border: 1px solid var(--nx-surface-stroke);
+      border-radius: var(--nx-radius-md);
+      padding: 24px;
+      transition: transform 0.18s ease, border-color 0.18s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(229, 184, 75, 0.55);
+    }
+
+    .feature-tag {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(45, 212, 191, 0.12);
+      color: var(--nx-accent-300);
+      margin-bottom: 14px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--nx-text-primary);
+    }
+
+    .feature-card p {
+      font-size: 0.94rem;
+      color: var(--nx-text-secondary);
+    }
+
+    /* Rules Mechanics 3-Step */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .rule-box {
+      background: linear-gradient(180deg, rgba(18, 27, 45, 0.95) 0%, rgba(12, 18, 31, 0.95) 100%);
+      border: 1px solid var(--nx-surface-stroke);
+      border-radius: var(--nx-radius-md);
+      padding: 26px;
+    }
+
+    .rule-step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(229, 184, 75, 0.16);
+      border: 1px solid rgba(229, 184, 75, 0.45);
+      color: var(--nx-gold-300);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .rule-box h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .rule-box p {
+      color: var(--nx-text-secondary);
+      font-size: 0.94rem;
+    }
+
+    /* Screenshots Gallery */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    .screenshot-card {
+      background: var(--nx-surface-card);
+      border: 1px solid var(--nx-surface-stroke);
+      border-radius: var(--nx-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--nx-shadow-soft);
+    }
+
+    .screenshot-frame {
+      background: #070a12;
+      padding: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--nx-surface-stroke);
+    }
+
+    .screenshot-frame img {
+      max-height: 520px;
+      width: auto;
+      max-width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .screenshot-info {
+      padding: 20px 24px;
+    }
+
+    .screenshot-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--nx-text-primary);
+    }
+
+    .screenshot-info p {
+      font-size: 0.92rem;
+      color: var(--nx-text-secondary);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      padding: 52px 0 44px;
+      background: #070a11;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(36, 49, 79, 0.55);
+    }
+
+    .footer-brand p {
+      color: var(--nx-text-muted);
+      font-size: 0.92rem;
+      margin-top: 12px;
+      max-width: 380px;
+    }
+
+    .footer-col h3 {
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--nx-text-primary);
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.92rem;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.86rem;
+      color: var(--nx-text-muted);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        gap: 14px;
+        font-size: 0.86rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="/" class="brand-link" aria-label="Nexalo Home">
+        <img src="/assets/nexalo-logo.svg" alt="Nexalo Competitive Strategy Platform Logo" class="brand-logo" width="190" height="50" />
+      </a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#modes">Game Modes</a>
+        <a href="#mechanics">Rules</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/account-deletion">Account Deletion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge-pill">24-Point Tactical Board Strategy</div>
+          <h1><span class="highlight">Tactical Mill</span> — Cờ hàng 24</h1>
+          <p class="hero-lead">
+            Outthink your opponent on a 24-intersection board spanning three concentric rings and diagonal tactical corridors. Build 3-in-a-row mills, lock down key intersections, and climb the competitive Glicko-2 Ranked ladder.
+          </p>
+          <div class="cta-group">
+            <span class="btn-primary" role="status" aria-label="Google Play Release Status">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.293-.708V2.522c0-.265.106-.52.292-.708zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
+              </svg>
+              Coming Soon on Google Play
+            </span>
+            <a href="#mechanics" class="btn-secondary">Explore Board Rules</a>
+          </div>
+          <div class="meta-tags">
+            <span>Package: <code>online.nexalo.tacticalmill</code></span>
+            <span>•</span>
+            <span>Languages: English &amp; Tiếng Việt</span>
+            <span>•</span>
+            <span>Age Rating: 13+</span>
+          </div>
+        </div>
+
+        <div class="board-showcase-card">
+          <svg class="board-svg" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="24-point Tactical Mill board geometry with three concentric squares and connecting axes">
+            <!-- Outer, Middle, Inner Rings -->
+            <rect x="24" y="24" width="212" height="212" rx="4" stroke="#E5B84B" stroke-width="2.5"/>
+            <rect x="60" y="60" width="140" height="140" rx="4" stroke="#E5B84B" stroke-width="2.5"/>
+            <rect x="96" y="96" width="68" height="68" rx="4" stroke="#E5B84B" stroke-width="2.5"/>
+            <!-- Orthogonal Crosses -->
+            <line x1="130" y1="24" x2="130" y2="96" stroke="#E5B84B" stroke-width="2.2"/>
+            <line x1="130" y1="164" x2="130" y2="236" stroke="#E5B84B" stroke-width="2.2"/>
+            <line x1="24" y1="130" x2="96" y2="130" stroke="#E5B84B" stroke-width="2.2"/>
+            <line x1="164" y1="130" x2="236" y2="130" stroke="#E5B84B" stroke-width="2.2"/>
+            <!-- 4 Tactical Diagonals -->
+            <line x1="24" y1="24" x2="96" y2="96" stroke="#2DD4BF" stroke-width="1.8" stroke-dasharray="4 3"/>
+            <line x1="236" y1="24" x2="164" y2="96" stroke="#2DD4BF" stroke-width="1.8" stroke-dasharray="4 3"/>
+            <line x1="24" y1="236" x2="96" y2="164" stroke="#2DD4BF" stroke-width="1.8" stroke-dasharray="4 3"/>
+            <line x1="236" y1="236" x2="164" y2="164" stroke="#2DD4BF" stroke-width="1.8" stroke-dasharray="4 3"/>
+            <!-- Sample Stones -->
+            <circle cx="24" cy="24" r="8" fill="#EF4444" stroke="#FCA5A5" stroke-width="2"/>
+            <circle cx="130" cy="24" r="8" fill="#EF4444" stroke="#FCA5A5" stroke-width="2"/>
+            <circle cx="236" cy="24" r="8" fill="#EF4444" stroke="#FCA5A5" stroke-width="2"/>
+            <circle cx="60" cy="60" r="8" fill="#38BDF8" stroke="#BAE6FD" stroke-width="2"/>
+            <circle cx="130" cy="60" r="8" fill="#38BDF8" stroke="#BAE6FD" stroke-width="2"/>
+            <circle cx="96" cy="96" r="8" fill="#EF4444" stroke="#FCA5A5" stroke-width="2"/>
+            <circle cx="164" cy="164" r="8" fill="#38BDF8" stroke="#BAE6FD" stroke-width="2"/>
+          </svg>
+          <p class="board-caption">
+            <strong>24 Intersections • 3 Concentric Rings • 20 Mill Lines</strong><br/>
+            Pure deterministic board strategy with zero pay-to-win stats.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section id="modes" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">Competitive &amp; Solo Play</div>
+          <h2>Six Ways to Master the Board</h2>
+          <p class="section-subtitle">
+            Practice offline at your own pace or test your tactical precision against live opponents in server-authoritative real-time matches.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <span class="feature-tag">Solo Practice</span>
+            <h3>Offline AI (4 Difficulty Tiers)</h3>
+            <p>Train against four distinct bot personalities — Easy, Medium, Hard, and Master — powered by an evaluated tactical search engine that works anytime without an internet connection.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag">Competitive Ladder</span>
+            <h3>Ranked Glicko-2 Matchmaking</h3>
+            <p>Compete in rated matches governed by an authoritative server clock and Glicko-2 Rating Points (RP). Advance through seasonal tiers from Bronze to Challenger.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag">Virtual Coin Tiers</span>
+            <h3>6-Tier Tactical Arena</h3>
+            <p>Enter high-stakes virtual Coin arenas across six progressive halls. All arena entries and rewards use in-game virtual Coins earned through gameplay.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag">Custom Lobbies</span>
+            <h3>Private Friend Rooms</h3>
+            <p>Create a private room protected by a server-generated 4-digit PIN and invite a friend for instant head-to-head matches across Android and Web.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag">Tactical Training</span>
+            <h3>Daily Mill Puzzles</h3>
+            <p>Solve curated endgame and double-mill positions designed to sharpen your pattern recognition on diagonal and cross-ring intersections.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag">Local Multiplayer</span>
+            <h3>2-Player Pass &amp; Play</h3>
+            <p>Share a single device for classic tabletop duels with a friend, complete with move highlights, mill indicators, and full draw/threefold-repetition rules.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Mechanics Section -->
+    <section id="mechanics" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">How It Works</div>
+          <h2>Core Rules of Tactical Mill (Cờ hàng 24)</h2>
+          <p class="section-subtitle">
+            Every match unfolds across two tactical phases where positioning, tempo, and mill locks determine victory.
+          </p>
+        </div>
+
+        <div class="rules-grid">
+          <div class="rule-box">
+            <div class="rule-step">1</div>
+            <h3>Phase 1 — Nine-Stone Placement</h3>
+            <p>Players alternate placing 9 stones onto any vacant intersection across the three concentric squares. Forming a straight line of 3 stones (a Mill) immediately lets you capture one unprotected opponent stone.</p>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-step">2</div>
+            <h3>Phase 2 — Adjacent Movement &amp; Shuttle Mills</h3>
+            <p>Once all stones are placed, players slide one stone per turn along connected lines to an adjacent empty point. Opening and closing double mills creates decisive tactical forks.</p>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-step">3</div>
+            <h3>Victory &amp; Tournament Draw Rules</h3>
+            <p>Win by reducing your opponent to 2 stones or blocking all of their legal moves. Competitive matches also enforce threefold position repetition and non-capture move-count draw rules.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="section-block">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-eyebrow">In-Game Preview</div>
+          <h2>Designed for Clarity Under Time Pressure</h2>
+          <p class="section-subtitle">
+            High-contrast Obsidian &amp; Gold board geometry keeps legal intersections, last-move trails, and active mill lines unmistakable on every screen size.
+          </p>
+        </div>
+
+        <div class="screenshots-grid">
+          <figure class="screenshot-card">
+            <div class="screenshot-frame">
+              <img src="/assets/screenshot-lobby.png" alt="Tactical Mill main lobby showing Ranked, Quick Match, Arena, Offline AI, and Daily Puzzle modes" width="540" height="960" loading="lazy" />
+            </div>
+            <figcaption class="screenshot-info">
+              <h3>Unified Mode Hub &amp; Player Profile</h3>
+              <p>Switch seamlessly between Offline AI training, Daily Puzzles, Private PIN Rooms, and live Ranked matchmaking with full English and Vietnamese support.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="screenshot-card">
+            <div class="screenshot-frame">
+              <img src="/assets/screenshot-match.png" alt="Tactical Mill 24-point board gameplay showing Red and Blue stones, turn timers, and phase status" width="540" height="960" loading="lazy" />
+            </div>
+            <figcaption class="screenshot-info">
+              <h3>24-Point Tactical Board &amp; Live Match HUD</h3>
+              <p>Crisp intersection indicators, remaining stone counters, authoritative turn clocks, and full post-match move replay inspection.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/nexalo-logo.svg" alt="Nexalo Logo" class="brand-logo" width="168" height="44" />
+          <p>
+            Nexalo builds server-authoritative competitive board and abstract strategy games with fair matchmaking and full user data transparency.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Legal &amp; Compliance</h3>
+          <ul>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/account-deletion">Account &amp; Data Deletion</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Player Support</h3>
+          <ul>
+            <li><a href="mailto:support@nexalo.online">support@nexalo.online</a></li>
+            <li><span>Package: <code>online.nexalo.tacticalmill</code></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Nexalo (NexaloOnline). All rights reserved.</span>
+        <span>
+          <a href="/privacy">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="/account-deletion">Delete Account</a> &nbsp;|&nbsp;
+          <a href="mailto:support@nexalo.online">support@nexalo.online</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
